@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gom Concept — Gốm thủ công · Handmade Ceramics</title>
+<meta name="description" content="Gom Concept: gốm thủ công tối giản, mỗi món là một bản duy nhất. Handmade ceramics, one of a kind.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header class="nav">
+  <a href="#top" class="logo">Gom<span>Concept</span></a>
+  <nav>
+    <a href="#collection" data-vi="Bộ sưu tập" data-en="Collection"></a>
+    <a href="#story" data-vi="Câu chuyện" data-en="Story"></a>
+    <a href="#contact" data-vi="Liên hệ" data-en="Contact"></a>
+    <button id="lang" aria-label="Đổi ngôn ngữ / Switch language">EN</button>
+  </nav>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <p class="eyebrow" data-vi="Gốm thủ công" data-en="Handmade ceramics"></p>
+    <h1 data-vi="Mỗi món gốm,<br><em>một hơi thở của đất.</em>" data-en="Every piece,<br><em>a breath of clay.</em>"></h1>
+    <a class="link" href="#collection" data-vi="Xem bộ sưu tập ↓" data-en="View the collection ↓"></a>
+  </section>
+
+  <section id="collection">
+    <div class="head">
+      <h2 data-vi="Bộ sưu tập" data-en="Collection"></h2>
+      <div class="filters" id="filters"></div>
+    </div>
+    <div class="grid" id="grid"></div>
+  </section>
+
+  <section id="story" class="story">
+    <h2 data-vi="Câu chuyện" data-en="Story"></h2>
+    <p data-vi="Gom Concept bắt đầu từ niềm yêu thích những vật dụng giản dị. Mỗi món gốm được nặn, tráng men và nung bằng tay, nên không có hai món nào giống hệt nhau. Những vết men chảy, đường nặn nhỏ không hoàn hảo chính là dấu ấn của người làm."
+       data-en="Gom Concept began with a love for simple, everyday objects. Each piece is shaped, glazed and fired by hand, so no two are alike. Every drip of glaze and slight imperfection is the maker's mark."></p>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2 data-vi="Liên hệ" data-en="Contact"></h2>
+    <p data-vi="Đặt hàng, đặt riêng hoặc hợp tác — hãy nhắn cho chúng tôi." data-en="For orders, commissions or collaborations — get in touch."></p>
+    <p class="links">
+      <a href="mailto:hello@gomconcept.com">hello@gomconcept.com</a>
+      <a href="https://instagram.com/gomconcept" target="_blank" rel="noopener">Instagram</a>
+    </p>
+  </section>
+</main>
+
+<footer>© <span id="y"></span> Gom Concept</footer>
+
+<div class="modal" id="modal" hidden>
+  <div class="box">
+    <button class="close" id="close" aria-label="Close">×</button>
+    <div class="img" id="mImg"></div>
+    <div class="info">
+      <h3 id="mName"></h3>
+      <p id="mDesc"></p>
+      <p class="meta" id="mMeta"></p>
+      <a class="btn" id="mBuy" href="#contact"></a>
+    </div>
+  </div>
+</div>
+<script src="assets/products.js"></script>
+<script src="assets/app.js"></script>
+</body>
+</html>
