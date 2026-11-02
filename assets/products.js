@@ -31,4 +31,4 @@ const PRODUCTS=[
   desc:{vi:"Chén nhỏ men xám khói, hợp trà hoặc món tráng miệng.",en:"Small smoky-grey bowl for tea or dessert."},
   meta:{vi:"Ø 11 cm · Men xám",en:"Ø 11 cm · Grey glaze"}}
 ];
-const CATS={all:{vi:"Tất cả",en:"All"},vase:{vi:"Bình",en:"Vases"},bowl:{vi:"Tô & chén",en:"Bowls"},cup:{vi:"Ly",en:"Cups"},plate:{vi:"Đĩa",en:"Plates"}};
+const CATS={all:{vi:"Tất cả sản phẩm",en:"All products"},vase:{vi:"Bình & lọ",en:"Vases & vessels"},tableware:{vi:"Bát & đĩa",en:"Bowls & plates"},cup:{vi:"Ly & tách",en:"Cups & mugs"},lamp:{vi:"Đèn",en:"Lamps"},small:{vi:"Những đồ nhỏ",en:"Small objects"}};
