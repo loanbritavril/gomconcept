@@ -5,7 +5,12 @@ body{background:var(--bg);color:var(--ink);font:300 16px/1.7 Inter,sans-serif}
 a{color:inherit;text-decoration:none}
 h1,h2,h3,.logo{font-family:"Cormorant Garamond",serif;font-weight:300}
 .nav{position:sticky;top:0;z-index:5;display:flex;justify-content:space-between;align-items:center;padding:18px 5vw;background:rgba(251,250,247,.92);backdrop-filter:blur(8px)}
-.logo{font-size:1.5rem;letter-spacing:.04em}.logo span{font-style:italic;margin-left:.3em;color:var(--mute)}
+.logo{display:flex;align-items:center;gap:12px;flex-shrink:0}
+.logo-mark{display:block;position:relative;width:64px;height:64px;overflow:hidden;flex-shrink:0}
+.logo-mark img{position:absolute;width:202.26%;height:auto;max-width:none;left:-50%;top:-59%}
+.logo-text{display:flex;flex-direction:column;gap:6px}
+.logo-name{font-size:1.5rem;letter-spacing:.04em;line-height:1.2}
+.logo-tagline{font:400 .62rem/1.4 Inter,sans-serif;letter-spacing:.12em;color:var(--mute)}
 .nav nav{display:flex;gap:28px;align-items:center;font-size:.85rem;letter-spacing:.08em;text-transform:uppercase}
 .nav a:hover{color:var(--mute)}
 #lang{background:none;border:1px solid var(--line);padding:4px 12px;font:inherit;cursor:pointer;border-radius:20px}
@@ -41,4 +46,4 @@ footer{text-align:center;padding:40px;font-size:.8rem;color:var(--mute)}
 .btn{display:inline-block;margin-top:28px;padding:12px 28px;border:1px solid var(--ink);font-size:.85rem;letter-spacing:.08em;text-transform:uppercase}
 .btn:hover{background:var(--ink);color:var(--bg)}
 .close{position:absolute;top:-40px;right:0;background:none;border:0;font-size:2rem;cursor:pointer}
-@media(max-width:700px){.box{grid-template-columns:1fr;gap:20px;max-height:90vh;overflow:auto}.nav nav{gap:14px;font-size:.7rem}.logo span{display:none}}
+@media(max-width:700px){.box{grid-template-columns:1fr;gap:20px;max-height:90vh;overflow:auto}.nav nav{gap:14px;font-size:.7rem}.nav{flex-wrap:wrap;gap:16px}.logo-mark{width:52px;height:52px}.logo-name{font-size:1.3rem}.logo-tagline{font-size:.58rem}.nav nav{flex-wrap:wrap} }
