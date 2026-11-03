@@ -22,7 +22,7 @@ def text(tag, vi, en, attrs=''):
 def cards(items):
     out = '<div class="grid">'
     for p in items:
-        art = shapes[p['shape']].replace('COLOR', p['color'])
+        art = (f'<img src="{{{{ROOT}}}}{p["image"]}" alt="{escape(p["name"]["vi"])}" loading="lazy">' if p['image'] else shapes[p['shape']].replace('COLOR', p['color']))
         out += f'<button class="card" data-id="{p["id"]}"><div class="thumb">{art}</div>' + text('h3', **p['name']) + text('p', **p['meta']) + '</button>'
     return out + '</div>'
 def intro(title, en, desc, desc_en):

@@ -17,4 +17,4 @@ python3 scripts/build_site.py
 
 Commit the generated HTML pages and `sitemap.xml` along with source changes. Preview with `python3 -m http.server 8000`.
 
-The Lamps, Small objects and One of a kind pages deliberately show empty states until their inventory and imagery are supplied. Current email and Instagram links are retained from the original website.
+The Small objects and One of a kind pages deliberately show empty states until their inventory and imagery are supplied. Current email and Instagram links are retained from the original website.

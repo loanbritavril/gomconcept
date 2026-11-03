@@ -29,6 +29,10 @@ const PRODUCTS=[
  {id:6,cat:"bowl",shape:"bowl",color:"#cfd4d6",image:"",
   name:{vi:"Chén Sương Khói",en:"Mist Bowl"},
   desc:{vi:"Chén nhỏ men xám khói, hợp trà hoặc món tráng miệng.",en:"Small smoky-grey bowl for tea or dessert."},
-  meta:{vi:"Ø 11 cm · Men xám",en:"Ø 11 cm · Grey glaze"}}
+  meta:{vi:"Ø 11 cm · Men xám",en:"Ø 11 cm · Grey glaze"}},
+ {id:7,cat:"lamp",shape:"lamp",color:"#2555a0",image:"assets/img/blue-moon-01.jpg",images:["assets/img/blue-moon-01.jpg","assets/img/blue-moon-02.jpg"],
+  name:{vi:"Blue Moon",en:"Blue Moon"},
+  desc:{vi:"Đèn gốm men xanh với bề mặt tạo hình gợi những hố nhỏ trên mặt trăng, kết hợp ánh sáng vàng ấm.",en:"A blue-glazed ceramic lamp with a textured surface reminiscent of lunar craters, paired with a warm golden glow."},
+  meta:{vi:"Đèn gốm · Men xanh",en:"Ceramic lamp · Blue glaze"}}
 ];
 const CATS={all:{vi:"Tất cả sản phẩm",en:"All products"},vase:{vi:"Bình & lọ",en:"Vases & vessels"},tableware:{vi:"Bát & đĩa",en:"Bowls & plates"},cup:{vi:"Ly & tách",en:"Cups & mugs"},lamp:{vi:"Đèn",en:"Lamps"},small:{vi:"Những đồ nhỏ",en:"Small objects"}};
