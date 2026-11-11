@@ -40,6 +40,7 @@
       <a href="mailto:dearsoleconcept@gmail.com">Email</a>
       <a href="https://www.instagram.com/dearsole.concept/" target="_blank" rel="noopener">Instagram ↗</a>
     </div></details>
+    <button id="cartBtn" class="cart-btn" aria-label="Giỏ hàng / Cart"><span data-vi="Giỏ hàng" data-en="Cart">Giỏ hàng</span> (<span id="cartCount">0</span>)</button>
     <button id="lang" aria-label="Đổi ngôn ngữ / Switch language">EN</button>
   </nav>
 </header>
@@ -47,9 +48,34 @@
 <footer><a href="./">𝓓𝓮𝓪𝓻 𝚂𝚘𝚕𝚎́</a><p>Ceramic &amp; Clay Concept</p><p>© <span id="y">2026</span> Dear Solé</p></footer>
 <div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="mName" hidden>
   <div class="box"><button class="close" id="close" aria-label="Đóng / Close">×</button>
-    <div class="img" id="mImg"></div><div class="info"><h3 id="mName"></h3><p id="mDesc"></p><p class="meta" id="mMeta"></p><div class="gallery-thumbs" id="mGallery" aria-label="Ảnh sản phẩm / Product photos"></div>
-    <a class="btn" id="mBuy" href="./lien-he/" data-contact="./lien-he/"></a></div>
+    <div class="img" id="mImg"></div><div class="info"><h3 id="mName"></h3><p id="mDesc"></p><p class="meta" id="mMeta"></p><p class="price" id="mPrice"></p><div class="gallery-thumbs" id="mGallery" aria-label="Ảnh sản phẩm / Product photos"></div>
+    <div class="actions"><button type="button" class="btn btn-solid" id="mAdd"></button> <a class="btn" id="mBuy" href="./lien-he/" data-contact="./lien-he/"></a></div></div>
   </div>
 </div>
+<div class="cart-overlay" id="cartOverlay" hidden></div>
+<aside class="cart" id="cart" role="dialog" aria-modal="true" aria-labelledby="cartTitle" hidden>
+  <div class="cart-head"><h2 id="cartTitle" data-vi="Giỏ hàng" data-en="Your cart">Giỏ hàng</h2><button class="close" id="cartClose" aria-label="Đóng / Close">×</button></div>
+  <div class="cart-body">
+    <p class="cart-empty" id="cartEmpty" data-vi="Giỏ hàng đang trống." data-en="Your cart is empty.">Giỏ hàng đang trống.</p>
+    <ul class="cart-items" id="cartItems"></ul>
+    <p class="cart-total" id="cartTotal"></p>
+    <form id="orderForm" novalidate>
+      <h3 data-vi="Thông tin nhận hàng" data-en="Delivery details">Thông tin nhận hàng</h3>
+      <label><span data-vi="Họ tên *" data-en="Full name *">Họ tên *</span><input name="name" required autocomplete="name"></label>
+      <label><span data-vi="Số điện thoại *" data-en="Phone *">Số điện thoại *</span><input name="phone" type="tel" required autocomplete="tel"></label>
+      <label><span data-vi="Địa chỉ giao hàng *" data-en="Delivery address *">Địa chỉ giao hàng *</span><textarea name="address" rows="2" required autocomplete="street-address"></textarea></label>
+      <label><span data-vi="Email" data-en="Email">Email</span><input name="email" type="email" autocomplete="email"></label>
+      <label><span data-vi="Ghi chú" data-en="Note">Ghi chú</span><textarea name="note" rows="2"></textarea></label>
+      <p class="form-error" id="orderError" role="alert" hidden></p>
+      <button class="btn btn-solid" type="submit" data-vi="Gửi đơn hàng qua email" data-en="Send order by email">Gửi đơn hàng qua email</button>
+      <p class="cart-help" data-vi="Đơn sẽ mở trong ứng dụng email của bạn để gửi tới Dear Solé. Chúng tôi sẽ liên hệ xác nhận đơn, phí giao hàng và cách thanh toán." data-en="Your email app will open with the order ready to send to Dear Solé. We will contact you to confirm the order, shipping and payment.">Đơn sẽ mở trong ứng dụng email của bạn để gửi tới Dear Solé. Chúng tôi sẽ liên hệ xác nhận đơn, phí giao hàng và cách thanh toán.</p>
+      <div class="cart-fallback" id="cartFallback" hidden>
+        <p data-vi="Email chưa mở? Sao chép đơn và gửi tới dearsoleconcept@gmail.com hoặc nhắn Instagram." data-en="Email did not open? Copy the order and send it to dearsoleconcept@gmail.com or message us on Instagram.">Email chưa mở? Sao chép đơn và gửi tới dearsoleconcept@gmail.com hoặc nhắn Instagram.</p>
+        <button type="button" class="link-btn" id="copyOrder" data-vi="Sao chép đơn hàng" data-en="Copy order">Sao chép đơn hàng</button>
+        <button type="button" class="link-btn" id="clearCart" data-vi="Xóa giỏ hàng" data-en="Clear cart">Xóa giỏ hàng</button>
+      </div>
+    </form>
+  </div>
+</aside>
 <script src="./assets/products.js"></script><script src="./assets/app.js"></script>
 </body></html>
