@@ -34,6 +34,10 @@ const PRODUCTS=[
  {id:7,price:599000,cat:"lamp",shape:"lamp",color:"#2555a0",image:"assets/img/blue-moon-01.jpg",images:["assets/img/blue-moon-01.jpg","assets/img/blue-moon-02.jpg"],
   name:{vi:"Blue Moon",en:"Blue Moon"},
   desc:{vi:"Đèn gốm men xanh với bề mặt tạo hình gợi những hố nhỏ trên mặt trăng, kết hợp ánh sáng vàng ấm.",en:"A blue-glazed ceramic lamp with a textured surface reminiscent of lunar craters, paired with a warm golden glow."},
-  meta:{vi:"Đèn gốm · Men xanh",en:"Ceramic lamp · Blue glaze"}}
+  meta:{vi:"Đèn gốm · Men xanh",en:"Ceramic lamp · Blue glaze"}},
+ {id:8,price:399000,cat:"lamp",shape:"lamp",color:"#6b4a35",image:"assets/img/ember-nest-01.jpg",images:["assets/img/ember-nest-01.jpg","assets/img/ember-nest-02.jpg"],
+  name:{vi:"Ember Nest",en:"Ember Nest"},
+  desc:{vi:"Tổ ấm của những đốm lửa nhỏ. Có chút rustic, whimsical và playful retro.",en:"A warm nest for tiny sparks. A touch of rustic, whimsical and playful retro."},
+  meta:{vi:"Cao 20 cm · Men nâu, ghi",en:"H 20 cm · Brown, grey glaze"}}
 ];
 const CATS={all:{vi:"Tất cả sản phẩm",en:"All products"},vase:{vi:"Bình & lọ",en:"Vases & vessels"},tableware:{vi:"Bát & đĩa",en:"Bowls & plates"},cup:{vi:"Ly & tách",en:"Cups & mugs"},lamp:{vi:"Đèn",en:"Lamps"},small:{vi:"Những đồ nhỏ",en:"Small objects"}};
