@@ -108,3 +108,34 @@ button.btn{font-family:inherit}
 @media(max-width:1100px){.cart-btn{align-self:flex-start}}
 .cart-fallback[hidden],#orderForm[hidden]{display:none}
 .contact-options a{overflow-wrap:anywhere}
+
+/* Biểu tượng tìm kiếm & giỏ hàng */
+.nav-icons{display:flex;align-items:center;gap:6px;margin-left:18px}
+.nav nav{margin-left:auto}
+.icon-btn{position:relative;display:grid;place-items:center;width:44px;height:44px;background:none;border:0;padding:0;color:var(--ink);cursor:pointer;border-radius:50%}
+.icon-btn:hover{color:var(--mute)}
+.icon-btn:focus-visible{outline:2px solid var(--ink);outline-offset:2px}
+.cart-btn{border:0;padding:0;border-radius:50%}
+.cart-badge{position:absolute;top:3px;right:1px;min-width:18px;height:18px;padding:0 5px;border-radius:9px;background:var(--ink);color:var(--bg);font:500 .68rem/18px Inter,sans-serif;text-align:center}
+.cart-badge[hidden]{display:none}
+@media(max-width:1100px){.nav-icons{order:1;margin-left:8px}.nav nav{order:2}.menu-toggle{order:0}.cart-btn{align-self:auto}}
+.search-overlay{position:fixed;inset:0;background:rgba(34,34,34,.35);z-index:30}
+.search{position:fixed;top:0;left:0;right:0;z-index:31;background:var(--bg);box-shadow:0 8px 30px rgba(0,0,0,.08);max-height:90vh;overflow:auto;padding:0 5vw 24px}
+.search[hidden],.search-overlay[hidden]{display:none}
+.search-bar{display:flex;align-items:center;gap:14px;max-width:var(--max);margin:0 auto;padding:22px 0;border-bottom:1px solid var(--line)}
+.search-bar input{flex:1;min-width:0;font:inherit;font-size:1.25rem;color:var(--ink);background:none;border:0;outline:0;padding:6px 0;-webkit-appearance:none}
+.search-bar input::-webkit-search-cancel-button{display:none}
+.search-bar .close{background:none;border:0;font-size:2rem;line-height:1;width:44px;height:44px;cursor:pointer}
+.search-results{max-width:var(--max);margin:0 auto;padding-top:8px}
+.search-results .sr-hint,.search-results .sr-empty{padding:28px 0;color:var(--mute);text-align:center}
+.sr-item{display:grid;grid-template-columns:72px 1fr auto;gap:16px;align-items:center;width:100%;padding:12px 0;background:none;border:0;border-bottom:1px solid var(--line);font:inherit;color:inherit;text-align:left;cursor:pointer}
+.sr-item:hover .sr-name,.sr-item:focus-visible .sr-name{text-decoration:underline}
+.sr-img{width:72px;height:90px;background:#f1eee7;display:grid;place-items:center;overflow:hidden}
+.sr-img img{width:100%;height:100%;object-fit:cover}
+.sr-img svg{width:70%;height:70%}
+.sr-name{font-family:"Cormorant Garamond",serif;font-size:1.35rem;line-height:1.2}
+.sr-meta{font-size:.85rem;color:var(--mute)}
+.sr-price{font-size:.9rem;white-space:nowrap}
+.cart-head .close,.search-bar .close{position:static}
+@media(max-width:700px){.nav{gap:6px}.logo{gap:8px}.logo-mark{width:44px;height:44px}.menu-toggle{padding:8px 10px}.nav-icons{gap:0;margin-left:0}.icon-btn{width:38px;height:38px}.icon-btn svg{width:24px;height:24px}.cart-badge{top:1px;right:-1px}}
+@media(max-width:380px){.logo-mark{width:38px;height:38px}.logo-name{font-size:1.15rem}.logo-tagline{font-size:.5rem;letter-spacing:0}.menu-toggle{padding:8px 8px;font-size:.75rem}.icon-btn{width:34px;height:34px}}

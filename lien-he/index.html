@@ -41,9 +41,12 @@
       <a href="https://www.instagram.com/dearsole.concept/" target="_blank" rel="noopener">Instagram ↗</a>
       <a href="https://www.facebook.com/share/1HiBH6bDLt/?mibextid=wwXIfr" target="_blank" rel="noopener">Facebook ↗</a>
     </div></details>
-    <button id="cartBtn" class="cart-btn" aria-label="Giỏ hàng / Cart"><span data-vi="Giỏ hàng" data-en="Cart">Giỏ hàng</span> (<span id="cartCount">0</span>)</button>
     <button id="lang" aria-label="Đổi ngôn ngữ / Switch language">EN</button>
   </nav>
+  <div class="nav-icons">
+    <button id="searchBtn" class="icon-btn" aria-label="Tìm kiếm / Search" aria-haspopup="dialog"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5 21 21"/></svg></button>
+    <button id="cartBtn" class="icon-btn cart-btn" aria-label="Giỏ hàng / Cart"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5.5 8h13a1 1 0 0 1 1 1l-.9 10a2 2 0 0 1-2 1.8H7.4a2 2 0 0 1-2-1.8L4.5 9a1 1 0 0 1 1-1z"/><path d="M8.5 8V7a3.5 3.5 0 0 1 7 0v1"/><path d="M9 12.5c.8 1.5 1.8 2.2 3 2.2s2.2-.7 3-2.2"/></svg><span class="cart-badge" id="cartCount" hidden>0</span></button>
+  </div>
 </header>
 <main id="top"><section class="page-intro"><a class="breadcrumb" href="../" data-vi="Trang chủ" data-en="Home">Trang chủ</a><h1  data-vi="Liên hệ" data-en="Contact">Liên hệ</h1><p  data-vi="Đặt hàng &amp; đặt riêng" data-en="Orders &amp; commissions">Đặt hàng & đặt riêng</p></section><section class="contact article"><h2  data-vi="Một món gốm dành cho bạn" data-en="A piece of pottery for you">Một món gốm dành cho bạn</h2><p  data-vi="Để đặt hàng, hãy gửi tên sản phẩm bạn quan tâm. Với đơn đặt riêng, hãy chia sẻ ý tưởng, kích thước, màu men, số lượng và thời gian mong muốn. Dear Solé sẽ trao đổi thêm về khả năng thực hiện, giá và thời gian hoàn thành." data-en="To place an order, send us the name of the piece you like. For a commission, share your idea, dimensions, glaze, quantity and desired timeline. Dear Solé will discuss feasibility, pricing and completion time with you.">Để đặt hàng, hãy gửi tên sản phẩm bạn quan tâm. Với đơn đặt riêng, hãy chia sẻ ý tưởng, kích thước, màu men, số lượng và thời gian mong muốn. Dear Solé sẽ trao đổi thêm về khả năng thực hiện, giá và thời gian hoàn thành.</p><div class="contact-options"><div><h2>Email</h2><a href="mailto:dearsoleconcept@gmail.com">dearsoleconcept@gmail.com</a></div><div><h2>Instagram</h2><a href="https://www.instagram.com/dearsole.concept/" target="_blank" rel="noopener">@dearsole.concept ↗</a></div><div><h2>Facebook</h2><a href="https://www.facebook.com/share/1HiBH6bDLt/?mibextid=wwXIfr" target="_blank" rel="noopener">Dear Solé ↗</a></div></div></section></main>
 <footer><a href="../">𝓓𝓮𝓪𝓻 𝚂𝚘𝚕𝚎́</a><p>Ceramic &amp; Clay Concept</p><p>© <span id="y">2026</span> Dear Solé</p></footer>
@@ -52,6 +55,15 @@
     <div class="img" id="mImg"></div><div class="info"><h3 id="mName"></h3><p id="mDesc"></p><p class="meta" id="mMeta"></p><p class="price" id="mPrice"></p><div class="gallery-thumbs" id="mGallery" aria-label="Ảnh sản phẩm / Product photos"></div>
     <div class="actions"><button type="button" class="btn btn-solid" id="mAdd"></button> <a class="btn" id="mBuy" href="../lien-he/" data-contact="../lien-he/"></a></div></div>
   </div>
+</div>
+<div class="search-overlay" id="searchOverlay" hidden></div>
+<div class="search" id="search" role="dialog" aria-modal="true" aria-label="Tìm kiếm sản phẩm" hidden>
+  <div class="search-bar">
+    <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5 21 21"/></svg>
+    <input id="searchInput" type="search" autocomplete="off" placeholder="Tìm sản phẩm…" data-ph-vi="Tìm sản phẩm…" data-ph-en="Search products…" aria-label="Tìm sản phẩm">
+    <button class="close" id="searchClose" aria-label="Đóng / Close">×</button>
+  </div>
+  <div class="search-results" id="searchResults" aria-live="polite"></div>
 </div>
 <div class="cart-overlay" id="cartOverlay" hidden></div>
 <aside class="cart" id="cart" role="dialog" aria-modal="true" aria-labelledby="cartTitle" hidden>
