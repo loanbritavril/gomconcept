@@ -12,41 +12,53 @@
 <link rel="stylesheet" href="../../assets/style.css">
 </head>
 <body>
-<header class="nav">
-  <a href="../../" class="logo" aria-label="Dear Solé — Ceramic &amp; Clay Concept">
-    <span class="logo-mark"><img src="../../assets/exec-b38fa0b2-671f-40af-9a76-47e898eaf617.png" alt="" width="1254" height="1254"></span>
-    <span class="logo-text"><span class="logo-name">𝓓𝓮𝓪𝓻 𝚂𝚘𝚕𝚎́</span><span class="logo-tagline">Ceramic &amp; Clay Concept</span></span>
-  </a>
-  <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="mainNav" data-vi="Menu" data-en="Menu">Menu</button>
-  <nav id="mainNav" aria-label="Điều hướng chính">
-    <a href="../../" data-vi="Trang chủ" data-en="Home">Trang chủ</a>
-    <details class="nav-group"><summary data-vi="Sản phẩm" data-en="Products">Sản phẩm</summary><div class="dropdown">
-      <a href="../../san-pham/" data-vi="Tất cả sản phẩm" data-en="All products">Tất cả sản phẩm</a>
-      <a href="../../san-pham/binh-lo/" data-vi="Bình &amp; lọ" data-en="Vases &amp; vessels">Bình &amp; lọ</a>
-      <a href="../../san-pham/bat-dia/" data-vi="Bát &amp; đĩa" data-en="Bowls &amp; plates">Bát &amp; đĩa</a>
-      <a href="../../san-pham/ly-tach/" data-vi="Ly &amp; tách" data-en="Cups &amp; mugs">Ly &amp; tách</a>
-      <a href="../../san-pham/den/" data-vi="Đèn" data-en="Lamps">Đèn</a>
-      <a href="../../san-pham/nhung-do-nho/" data-vi="Những đồ nhỏ" data-en="Small objects">Những đồ nhỏ</a>
-    </div></details>
-    <details class="nav-group"><summary data-vi="Bộ sưu tập" data-en="Collections">Bộ sưu tập</summary><div class="dropdown">
-      <a href="../../bo-suu-tap/" data-vi="Bộ sưu tập hiện tại" data-en="Current collection">Bộ sưu tập hiện tại</a>
-      <a href="../../bo-suu-tap/doc-ban/" data-vi="Sản phẩm độc bản" data-en="One of a kind">Sản phẩm độc bản</a>
-    </div></details>
-    <details class="nav-group"><summary data-vi="Về Dear Solé" data-en="About Dear Solé">Về Dear Solé</summary><div class="dropdown">
-      <a href="../../ve-dear-sole/" data-vi="Câu chuyện làm gốm" data-en="Our pottery story">Câu chuyện làm gốm</a>
-    </div></details>
-    <details class="nav-group"><summary data-vi="Liên hệ" data-en="Contact">Liên hệ</summary><div class="dropdown">
-      <a href="../../lien-he/" data-vi="Đặt hàng &amp; đặt riêng" data-en="Orders &amp; commissions">Đặt hàng &amp; đặt riêng</a>
-      <a href="mailto:dearsoleconcept@gmail.com">Email</a>
-      <a href="https://www.instagram.com/dearsole.concept/" target="_blank" rel="noopener">Instagram ↗</a>
-      <a href="https://www.facebook.com/share/1HiBH6bDLt/?mibextid=wwXIfr" target="_blank" rel="noopener">Facebook ↗</a>
-    </div></details>
-    <button id="lang" aria-label="Đổi ngôn ngữ / Switch language">EN</button>
-  </nav>
-  <div class="nav-icons">
-    <button id="searchBtn" class="icon-btn" aria-label="Tìm kiếm / Search" aria-haspopup="dialog"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5 21 21"/></svg></button>
-    <button id="cartBtn" class="icon-btn cart-btn" aria-label="Giỏ hàng / Cart"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5.5 8h13a1 1 0 0 1 1 1l-.9 10a2 2 0 0 1-2 1.8H7.4a2 2 0 0 1-2-1.8L4.5 9a1 1 0 0 1 1-1z"/><path d="M8.5 8V7a3.5 3.5 0 0 1 7 0v1"/><path d="M9 12.5c.8 1.5 1.8 2.2 3 2.2s2.2-.7 3-2.2"/></svg><span class="cart-badge" id="cartCount" hidden>0</span></button>
+<header class="nav" id="siteHeader">
+  <div class="nav-bar">
+    <button id="menuToggle" class="icon-btn" aria-expanded="false" aria-controls="mainNav" aria-label="Menu"><svg class="ic-open" viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 6.5h17M3.5 12h17M3.5 17.5h17"/></svg><svg class="ic-close" viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5.5 5.5l13 13M18.5 5.5l-13 13"/></svg></button>
+    <a href="../../" class="logo" aria-label="Dear Solé — Ceramic &amp; Clay Concept">
+      <span class="logo-mark"><img src="../../assets/exec-b38fa0b2-671f-40af-9a76-47e898eaf617.png" alt="" width="1254" height="1254"></span>
+      <span class="logo-text"><span class="logo-name">𝓓𝓮𝓪𝓻 𝚂𝚘𝚕𝚎́</span><span class="logo-tagline">Ceramic &amp; Clay Concept</span></span>
+    </a>
+    <div class="nav-icons">
+      <button id="searchBtn" class="icon-btn" aria-label="Tìm kiếm / Search" aria-controls="mainNav"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5 21 21"/></svg></button>
+      <button id="cartBtn" class="icon-btn cart-btn" aria-label="Giỏ hàng / Cart"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5.5 8h13a1 1 0 0 1 1 1l-.9 10a2 2 0 0 1-2 1.8H7.4a2 2 0 0 1-2-1.8L4.5 9a1 1 0 0 1 1-1z"/><path d="M8.5 8V7a3.5 3.5 0 0 1 7 0v1"/><path d="M9 12.5c.8 1.5 1.8 2.2 3 2.2s2.2-.7 3-2.2"/></svg><span class="cart-badge" id="cartCount" hidden>0</span></button>
+    </div>
   </div>
+  <nav id="mainNav" aria-label="Điều hướng chính" hidden>
+    <div class="panel-inner">
+      <div class="panel-search" id="panelSearch" hidden>
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5 21 21"/></svg>
+        <input id="searchInput" type="search" autocomplete="off" placeholder="Tìm sản phẩm…" data-ph-vi="Tìm sản phẩm…" data-ph-en="Search products…" aria-label="Tìm sản phẩm / Search products">
+        <button type="button" id="searchClear" aria-label="Xóa / Clear" hidden>×</button>
+      </div>
+      <div class="search-results" id="searchResults" aria-live="polite" hidden></div>
+      <div class="panel-menu" id="panelMenu">
+        <a class="pm-top" href="../../" data-vi="Trang chủ" data-en="Home">Trang chủ</a>
+        <div class="pm-group"><p class="pm-top" data-vi="Sản phẩm" data-en="Products">Sản phẩm</p>
+          <a href="../../san-pham/" data-vi="Tất cả sản phẩm" data-en="All products">Tất cả sản phẩm</a>
+          <a href="../../san-pham/binh-lo/" data-vi="Bình &amp; lọ" data-en="Vases &amp; vessels">Bình &amp; lọ</a>
+          <a href="../../san-pham/bat-dia/" data-vi="Bát &amp; đĩa" data-en="Bowls &amp; plates">Bát &amp; đĩa</a>
+          <a href="../../san-pham/ly-tach/" data-vi="Ly &amp; tách" data-en="Cups &amp; mugs">Ly &amp; tách</a>
+          <a href="../../san-pham/den/" data-vi="Đèn" data-en="Lamps">Đèn</a>
+          <a href="../../san-pham/nhung-do-nho/" data-vi="Những đồ nhỏ" data-en="Small objects">Những đồ nhỏ</a>
+        </div>
+        <div class="pm-group"><p class="pm-top" data-vi="Bộ sưu tập" data-en="Collections">Bộ sưu tập</p>
+          <a href="../../bo-suu-tap/" data-vi="Bộ sưu tập hiện tại" data-en="Current collection">Bộ sưu tập hiện tại</a>
+          <a href="../../bo-suu-tap/doc-ban/" data-vi="Sản phẩm độc bản" data-en="One of a kind">Sản phẩm độc bản</a>
+        </div>
+        <div class="pm-group"><p class="pm-top" data-vi="Về Dear Solé" data-en="About Dear Solé">Về Dear Solé</p>
+          <a href="../../ve-dear-sole/" data-vi="Câu chuyện làm gốm" data-en="Our pottery story">Câu chuyện làm gốm</a>
+        </div>
+        <div class="pm-group"><p class="pm-top" data-vi="Liên hệ" data-en="Contact">Liên hệ</p>
+          <a href="../../lien-he/" data-vi="Đặt hàng &amp; đặt riêng" data-en="Orders &amp; commissions">Đặt hàng &amp; đặt riêng</a>
+          <a href="mailto:dearsoleconcept@gmail.com">Email</a>
+          <a href="https://www.instagram.com/dearsole.concept/" target="_blank" rel="noopener">Instagram ↗</a>
+          <a href="https://www.facebook.com/share/1HiBH6bDLt/?mibextid=wwXIfr" target="_blank" rel="noopener">Facebook ↗</a>
+        </div>
+        <div class="pm-foot"><button id="lang" aria-label="Đổi ngôn ngữ / Switch language">EN</button></div>
+      </div>
+    </div>
+  </nav>
 </header>
 <main id="top"><section class="page-intro"><a class="breadcrumb" href="../../" data-vi="Trang chủ" data-en="Home">Trang chủ</a><h1  data-vi="Bát &amp; đĩa" data-en="Bowls &amp; plates">Bát & đĩa</h1><p  data-vi="Những hình dáng giản dị, dành cho những khoảnh khắc hàng ngày." data-en="Simple forms for everyday moments.">Những hình dáng giản dị, dành cho những khoảnh khắc hàng ngày.</p></section><section class="catalogue"><div class="filters category-links" aria-label="Danh mục sản phẩm"><a href="../../san-pham/" data-vi="Tất cả sản phẩm" data-en="All products">Tất cả sản phẩm</a><a href="../../san-pham/binh-lo/" data-vi="Bình &amp; lọ" data-en="Vases &amp; vessels">Bình & lọ</a><a href="../../san-pham/bat-dia/" aria-current="page" class="on" data-vi="Bát &amp; đĩa" data-en="Bowls &amp; plates">Bát & đĩa</a><a href="../../san-pham/ly-tach/" data-vi="Ly &amp; tách" data-en="Cups &amp; mugs">Ly & tách</a><a href="../../san-pham/den/" data-vi="Đèn" data-en="Lamps">Đèn</a><a href="../../san-pham/nhung-do-nho/" data-vi="Những đồ nhỏ" data-en="Small objects">Những đồ nhỏ</a></div><div class="empty"><h2  data-vi="Đang chờ những món gốm mới" data-en="New pieces are on their way">Đang chờ những món gốm mới</h2><p  data-vi="Danh mục này chưa có sản phẩm. Bạn có thể liên hệ để trao đổi về một món làm riêng." data-en="There are no pieces in this category yet. Get in touch to discuss a commission.">Danh mục này chưa có sản phẩm. Bạn có thể liên hệ để trao đổi về một món làm riêng.</p><a class="link" href="../../lien-he/" data-vi="Liên hệ đặt riêng →" data-en="Enquire about a commission →">Liên hệ đặt riêng →</a></div></section></main>
 <footer><a href="../../">𝓓𝓮𝓪𝓻 𝚂𝚘𝚕𝚎́</a><p>Ceramic &amp; Clay Concept</p><p>© <span id="y">2026</span> Dear Solé</p></footer>
@@ -55,15 +67,6 @@
     <div class="img" id="mImg"></div><div class="info"><h3 id="mName"></h3><p id="mDesc"></p><p class="meta" id="mMeta"></p><p class="price" id="mPrice"></p><div class="gallery-thumbs" id="mGallery" aria-label="Ảnh sản phẩm / Product photos"></div>
     <div class="actions"><button type="button" class="btn btn-solid" id="mAdd"></button> <a class="btn" id="mBuy" href="../../lien-he/" data-contact="../../lien-he/"></a></div></div>
   </div>
-</div>
-<div class="search-overlay" id="searchOverlay" hidden></div>
-<div class="search" id="search" role="dialog" aria-modal="true" aria-label="Tìm kiếm sản phẩm" hidden>
-  <div class="search-bar">
-    <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5 21 21"/></svg>
-    <input id="searchInput" type="search" autocomplete="off" placeholder="Tìm sản phẩm…" data-ph-vi="Tìm sản phẩm…" data-ph-en="Search products…" aria-label="Tìm sản phẩm">
-    <button class="close" id="searchClose" aria-label="Đóng / Close">×</button>
-  </div>
-  <div class="search-results" id="searchResults" aria-live="polite"></div>
 </div>
 <div class="cart-overlay" id="cartOverlay" hidden></div>
 <aside class="cart" id="cart" role="dialog" aria-modal="true" aria-labelledby="cartTitle" hidden>
