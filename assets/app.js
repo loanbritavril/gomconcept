@@ -11,7 +11,7 @@ function render() {
   $('#lang').textContent = lang === 'vi' ? 'EN' : 'VI';
   if (activeProduct) fillProduct(activeProduct);
   if (typeof renderCart === 'function') renderCart();
-  if (typeof renderSearch === 'function') renderSearch();
+  if (typeof renderSearch === 'function' && !$('#search').hidden) renderSearch();
 }
 function fillProduct(p) {
   const photos = p.images || (p.image ? [p.image] : []);
@@ -41,6 +41,12 @@ function closeModal() {
   activeProduct = null;
   previousFocus?.focus();
 }
+function closeMenus() {
+  document.querySelectorAll('.nav-group[open]').forEach(d => d.open = false);
+}
+document.querySelectorAll('.nav-group').forEach(group => group.addEventListener('toggle', () => {
+  if (group.open) document.querySelectorAll('.nav-group').forEach(other => { if (other !== group) other.open = false; });
+}));
 document.addEventListener('click', e => {
   const card = e.target.closest('.card');
   if (card) openProduct(card.dataset.id);
@@ -51,13 +57,22 @@ document.addEventListener('click', e => {
     try { localStorage.setItem('lang', lang); } catch (_) {}
     render();
   }
+  if (e.target.closest('#menuToggle')) {
+    const expanded = $('#menuToggle').getAttribute('aria-expanded') === 'true';
+    $('#menuToggle').setAttribute('aria-expanded', String(!expanded));
+    $('#mainNav').classList.toggle('is-open', !expanded);
+  }
   if (e.target.id === 'close' || e.target.id === 'modal') closeModal();
+  if (!e.target.closest('.nav-group')) closeMenus();
 });
 document.addEventListener('keydown', e => {
   if (e.key === 'Escape') {
+    if (!$('#search').hidden) closeSearch();
     if (!$('#cart').hidden) closeCart();
     if (!$('#modal').hidden) closeModal();
-    setPanel(false);
+    closeMenus();
+    $('#mainNav').classList.remove('is-open');
+    $('#menuToggle').setAttribute('aria-expanded', 'false');
   }
   if (e.key === 'Tab' && !$('#modal').hidden) {
     const first = $('#close'), last = $('#mBuy');
@@ -154,12 +169,9 @@ renderCart();
 const norm = t => String(t || '').toLowerCase().replace(/đ/g, 'd').normalize('NFD').replace(/[̀-ͯ]/g, '');
 const searchText = p => norm([p.name.vi, p.name.en, p.desc.vi, p.desc.en, p.meta.vi, p.meta.en, (CATS[p.cat === 'bowl' || p.cat === 'plate' ? 'tableware' : p.cat] || {}).vi, (CATS[p.cat === 'bowl' || p.cat === 'plate' ? 'tableware' : p.cat] || {}).en].join(' '));
 function renderSearch() {
-  const input = $('#searchInput'), q = norm(input.value).trim(), box = $('#searchResults');
-  input.placeholder = input.dataset['ph' + (lang === 'vi' ? 'Vi' : 'En')];
-  $('#searchClear').hidden = !input.value;
-  const searching = !$('#panelSearch').hidden && q.length > 0;
-  box.hidden = !searching; $('#panelMenu').hidden = searching;
-  if (!searching) { box.innerHTML = ''; return; }
+  const q = norm($('#searchInput').value).trim(), box = $('#searchResults');
+  $('#searchInput').placeholder = $('#searchInput').dataset['ph' + (lang === 'vi' ? 'Vi' : 'En')];
+  if (!q) { box.innerHTML = `<p class="sr-hint">${lang === 'vi' ? 'Nhập tên sản phẩm, loại hoặc chất liệu…' : 'Type a product name, type or glaze…'}</p>`; return; }
   const words = q.split(/\s+/);
   const hits = PRODUCTS.filter(p => { const t = searchText(p); return words.every(w => t.includes(w)); });
   box.innerHTML = hits.length ? hits.map(p => {
@@ -169,29 +181,26 @@ function renderSearch() {
       <span class="sr-price">${p.price ? money(p.price) : (lang === 'vi' ? 'Liên hệ' : 'On request')}</span></button>`;
   }).join('') : `<p class="sr-empty">${lang === 'vi' ? 'Không tìm thấy sản phẩm phù hợp.' : 'No matching products.'}</p>`;
 }
-/* Bảng menu / tìm kiếm xổ xuống dưới header */
-let panelMode = null;
-function setPanel(open, mode = 'menu') {
-  panelMode = open ? mode : null;
-  $('#mainNav').hidden = !open;
-  $('#siteHeader').classList.toggle('panel-open', open);
-  $('#menuToggle').setAttribute('aria-expanded', String(open));
-  $('#panelSearch').hidden = !(open && mode === 'search');
-  if (!open) $('#searchInput').value = '';
-  renderSearch();
-  if (open && mode === 'search') $('#searchInput').focus();
+function openSearch() {
+  previousFocus = document.activeElement;
+  if (!$('#cart').hidden) closeCart();
+  $('#search').hidden = false; $('#searchOverlay').hidden = false;
+  document.body.style.overflow = 'hidden';
+  renderSearch(); $('#searchInput').focus();
+}
+function closeSearch(restore = true) {
+  $('#search').hidden = true; $('#searchOverlay').hidden = true;
+  document.body.style.overflow = '';
+  $('#searchInput').value = '';
+  if (restore) previousFocus?.focus();
 }
 $('#searchInput').addEventListener('input', renderSearch);
-$('#searchInput').addEventListener('keydown', e => { if (e.key === 'Enter') { e.preventDefault(); const first = $('#searchResults .sr-item'); if (first) first.click(); } });
+$('#searchInput').addEventListener('keydown', e => { if (e.key === 'Enter') { const first = $('#searchResults .sr-item'); if (first) first.click(); } });
 document.addEventListener('click', e => {
-  if (e.target.closest('#menuToggle')) setPanel(panelMode !== 'menu', 'menu');
-  else if (e.target.closest('#searchBtn')) { if (!$('#cart').hidden) closeCart(); setPanel(panelMode !== 'search', 'search'); }
-  else if (e.target.closest('#searchClear')) { $('#searchInput').value = ''; renderSearch(); $('#searchInput').focus(); }
-  else if (e.target.closest('#cartBtn')) setPanel(false);
-  else if (e.target.closest('#mainNav a')) setPanel(false);
-  else if (panelMode && !e.target.closest('#siteHeader')) setPanel(false);
+  if (e.target.closest('#searchBtn')) openSearch();
+  if (e.target.id === 'searchClose' || e.target.id === 'searchOverlay') closeSearch();
   const sr = e.target.closest('[data-sr]');
-  if (sr) { const id = sr.dataset.sr; setPanel(false); openProduct(id); }
+  if (sr) { const id = sr.dataset.sr; closeSearch(false); openProduct(id); }
 });
 $('#y').textContent = new Date().getFullYear();
 render();
