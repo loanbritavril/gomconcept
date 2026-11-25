@@ -8,22 +8,22 @@ const SHAPES={
 };
 const PRODUCTS=[
 
- {id:7,price:599000,cat:"lamp",shape:"lamp",color:"#2555a0",image:"assets/img/blue-moon-01.jpg",images:["assets/img/blue-moon-01.jpg","assets/img/blue-moon-02.jpg"],
+ {id:7,price:399000,cat:"lamp",shape:"lamp",color:"#2555a0",image:"assets/img/blue-moon-01.jpg",images:["assets/img/blue-moon-01.jpg","assets/img/blue-moon-02.jpg"],
   name:{vi:"Blue Moon",en:"Blue Moon"},
   desc:{vi:"Đèn gốm men xanh với bề mặt tạo hình gợi những hố nhỏ trên mặt trăng, kết hợp ánh sáng vàng ấm.",en:"A blue-glazed ceramic lamp with a textured surface reminiscent of lunar craters, paired with a warm golden glow."},
   meta:{vi:"Đèn gốm · Men xanh",en:"Ceramic lamp · Blue glaze"}},
 
- {id:8,price:399000,cat:"lamp",shape:"lamp",color:"#6b4a35",image:"assets/img/ember-nest-01.jpg",images:["assets/img/ember-nest-01.jpg","assets/img/ember-nest-02.jpg"],
+ {id:8,price:199000,cat:"lamp",shape:"lamp",color:"#6b4a35",image:"assets/img/ember-nest-01.jpg",images:["assets/img/ember-nest-01.jpg","assets/img/ember-nest-02.jpg"],
   name:{vi:"Ember Nest",en:"Ember Nest"},
   desc:{vi:"Tổ ấm của những đốm lửa nhỏ. Có chút rustic, whimsical và playful retro.",en:"A warm nest for tiny sparks. A touch of rustic, whimsical and playful retro."},
   meta:{vi:"Cao 20 cm · Men nâu, ghi",en:"H 20 cm · Brown, grey glaze"}},
 
- {id:9,price:699000,cat:"lamp",shape:"lamp",color:"#e8b516",image:"assets/img/birdie-bell-cover-v2.jpg",images:["assets/img/birdie-bell-cover-v2.jpg","assets/img/birdie-bell-02.jpg"],
+ {id:9,price:399000,cat:"lamp",shape:"lamp",color:"#e8b516",image:"assets/img/birdie-bell-cover-v2.jpg",images:["assets/img/birdie-bell-cover-v2.jpg","assets/img/birdie-bell-02.jpg"],
   name:{vi:"Birdie Bell",en:"Birdie Bell"},
   desc:{vi:"Chiếc đèn mang dáng chuông vintage với sắc vàng tươi nổi bật, điểm xuyết chú chim xanh nhỏ xinh trên đỉnh. Sự kết hợp tinh nghịch giữa ba gam màu vàng, xanh và đỏ tạo nên một món decor độc đáo, mang đến chút vui tươi và ấm áp cho mọi góc nhà.",en:"A vintage bell-shaped lamp in a vivid bright yellow, topped with a cute little blue bird. The playful mix of yellow, blue and red makes a distinctive decor piece that brings a touch of joy and warmth to every corner of the home."},
   meta:{vi:"Cao 30 cm · Men vàng mù tạt, xanh ngọc, đỏ",en:"H 30 cm · Mustard yellow, turquoise, red glaze"}},
 
- {id:10,price:199000,cat:"small",shape:"plate",color:"#e9908d",image:"assets/img/mood-bloom-cover-v2.jpg",images:["assets/img/mood-bloom-cover-v2.jpg","assets/img/mood-bloom-02.jpg"],
+ {id:10,price:99000,cat:"small",shape:"plate",color:"#e9908d",image:"assets/img/mood-bloom-cover-v2.jpg",images:["assets/img/mood-bloom-cover-v2.jpg","assets/img/mood-bloom-02.jpg"],
   name:{vi:"Mood Bloom",en:"Mood Bloom"},
   desc:{vi:"Mood Bloom là bộ nam châm handmade bằng đất sét với thiết kế hoa 5 cánh đáng yêu, kết hợp cùng 5 gương mặt biểu cảm đại diện cho những mood khác nhau: vui vẻ, yêu đời, tức giận, buồn bã, sợ hãi. Không chỉ là món đồ trang trí tủ lạnh, Mood Bloom còn là cách nhỏ xinh để thể hiện tâm trạng mỗi ngày.",en:"Mood Bloom is a handmade clay magnet set with a cute five-petal flower and five expressive faces for different moods: cheerful, upbeat, angry, sad and scared. More than a fridge decoration, Mood Bloom is a small, charming way to show your mood each day."},
   meta:{vi:"Tuỳ chỉnh · Hồng, xanh, đỏ, tím, xanh lá",en:"Custom size · Pink, blue, red, purple, green"}}
